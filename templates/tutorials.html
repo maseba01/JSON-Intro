@@ -1,0 +1,23 @@
+<div ng-controller="ListController as list">
+	<div class="container">
+		<div class="row">
+			<div class="orderbyText text-center">
+				<h2>Order By:</h2>
+				<h4><a href="" ng-click="predicate = 'title'; reverse=false">Title</a></h4>
+				<h4><a href="" ng-click="predicate = 'author'; reverse=false">Author</a></h4> 
+				<h4><a href="" ng-click="predicate = 'url'; reverse=false">Url</a></h4> 
+			</div>
+			<br>
+			<div class="col-sm-6 col-md-4 text-center" ng-repeat="tutorial in list.items | orderBy:predicate">
+				<span class="thumbnail">
+					<img ng-src="{{tutorial.image}}" class="thumbImage">
+					<span class="caption">
+						<h3>{{tutorial.title}}</h3>
+						<h5><b>-{{tutorial.author}}</b></h5>
+						<a href="{{tutorial.url}}" target="blank">{{tutorial.url}}</p>
+					</span>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
