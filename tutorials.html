@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html ng-app="turtorialpage">
+<html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,8 +14,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/clean-blog.css" rel="stylesheet">
-
+    <link href="css/clean-blog" rel="stylesheet">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="styles.css"/>
@@ -40,87 +38,79 @@
 
 </head>
 
-  <body ng-controller="ListController as list">
- 
-    <!-- Page Header -->
-    <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('img/Shark-bg.jpg')">
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="post-heading">
-                        <h1>Top 8 Angular Tutorials</h1>
-                        <span class="meta">Posted by <a href="#">Andreo Sebastiani</a> on February 11, 2015</span>
-                    </div>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Home</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="blog.html">Blog</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Blog Entries Column -->
+            <div class="col-md-8 text-left">
+
+                <h1 class="page-header">
+                    Web Development Blog<br>
+                    <small>&nbsp; &nbsp; Follow along in my journey through web development!</small>
+                </h1>
+
+                <!-- First Blog Post -->
+                <h2>
+                    Getting Started with AngularJS
+                </h2>
+                <p><span class="glyphicon glyphicon-time"></span> Posted on Feb 8, 2015 at 2:00 PM</p>
+               <hr>
+                <img id="blogImage"class="img-responsive" src="images/angularjs.jpg" alt="AngularJS banner">
+                <hr>
+                <p>How to build the initial page for this website:</p>
+                <h3>1) Initialization (ng-app) </h3>
+                <p>The ng-app command is used as an attribute on an element to relay to the angular.js file which part of the webpage to interact with.</p>
+                <h3>2) Data </h3>
+                <p>An array of objects is stored in the tutorials.json file to be accessed by angular.</p>
+                <h3>3) Access (get)</h3>
+                <p>The get command allows angular to connect with the .json file in order to access the stored object array.</p>
+                <h3>4) Step through objects (ng-repeat)</h3>
+                <p>The ng-repeat class allows angular to step through an array of objects printing them to the page.</p>
+                <h3>5) Sort (ng-route) </h3>
+                <p>The ng-route command enables the page to use filters, in this case, search the stored array of objects by author, title, or url.</p>
+
+            </div>
                 </div>
             </div>
         </div>
-    </header>
-    
-	<article>
-        <div class="container">
-            <div class="row">
-			<h2 class="section-heading">Top 8 Angular Tutorials</h2>
-				<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" ng-repeat="list in list.tutorials">
-					<div class="thumbnail">
 
-					
-					<img src="{{list.image}}" alt="image">
-						
-						<div class="caption" class="col-sm-6 col-md-4">
-							
-							<h3>{{list.title}}</h3>
-							
-							<p>By: {{list.author}}</p>
-							
-							<p>Link to tutorial here: <a href="{{list.url}} " class="btn btn-primary" role="button">Tutorial</a>
-						
-						</div>
-					</div>
-				</div>
-		</div>
     </div>
-	
-	<hr>
+    <!-- /.container -->
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <ul class="list-inline text-center">
-                        <li>
-                            <a href="https://twitter.com/nic_Optimus">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-	
-	    <!-- jQuery -->
+    <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/clean-blog.min.js"></script>
-    
-  </body>
+</body>
 </html>
